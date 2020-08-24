@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigraçao</title>
+</head>
+<body>
+    <h1>De onde vc e</h1>
+    <p>De onde vc e?<input type="text" id="txtp" onclick="onde()"></p>
+    <div id="res"></div>
+    <script>
+        function onde(){
+            var pais = document.querySelector('input#txtp').value
+            var res = document.querySelector("div#res")
+            res.innerHTML = `<p> vc e de ${pais}</p>`
+            if(pais == 'Brasil'){
+                res.innerHTML +='<p>brasileiro</p>'
+            }else{
+
+                res.innerHTML += '<p>estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
